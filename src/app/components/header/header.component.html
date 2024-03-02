@@ -1,7 +1,9 @@
-<header class="w-5/6 m-auto h-10 bg-slate-200 mt-2  flex items-center ">
-  <ul class=" flex  gap-x-2">
-    @for (item of lista; track $index) {
-      <li>{{item}}</li>
-    }
-  </ul>
+<header class="w-5/6 m-auto  mt-5">
+  <nav class="flex gap-x-5 h-10  items-center ">
+    <a *ngFor="let enlace of enlaces; let i = index" routerLink="{{urls[i]}}"
+    class=" font-bold text-blue-800  hover:border-b-2 border-blue-500 text-xl transition-transform"
+    >{{
+      enlace
+    }}</a>
+  </nav>
 </header>

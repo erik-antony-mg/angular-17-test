@@ -1,9 +1,6 @@
 
 <main class="w-5/6 mx-auto">
   <section>
-      <h1>CONTADOR</h1><br>
-      <br>
-      <app-section [contador]=0 (mensajaDelHijo)="obtenerMensaje($event)"></app-section>
-      <h2 class="text-2xl">el mensaje del hijo es {{mensaje}}</h2>
+    <router-outlet></router-outlet>
   </section>
 </main>

@@ -1,9 +1,9 @@
 
-<div>
-  <label for="name">Name:</label><br />
-  <input type="text" id="name" [(ngModel)]="mensajeInput"/>
-  <button class="m-3 border rounded-xl bg-green-500 p-2" (click)="enviarMensaje()">Enviar</button>
-</div>
+<h2 class="text-2xl"> {{precio | currency:'PEN':'symbol':'1.2-2':'es-PE' }}</h2>
+<h2 class="text-2xl">{{fecha | date:'EEEE ,d,MMMM y'}}</h2>
+<h2 class="text-2xl">{{texto | miPipe}}</h2>
+<h2 class="text-2xl"> {{contador}}</h2>
+
 <button
   (click)="incrementar()"
   class="p-1 bg-blue-500 border rounded-lg hover:bg-blue-700 text-2xl ml-5 text-white"
@@ -18,7 +18,9 @@
 </button>
 <button
   (click)="reset()"
-  class="p-1 bg-blue-500 border rounded-lg hover:bg-blue-700 text-2xl ml-5 text-white"
+  appBotonEstilos
 >
   Reset
 </button>
+
+
