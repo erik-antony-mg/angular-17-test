@@ -1,4 +1,4 @@
 export interface Usuarios {
-  nombre?:     string;
-  email?:      string;
+  nombre:     string;
+  email:      string;
 }

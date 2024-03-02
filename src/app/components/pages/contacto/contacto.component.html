@@ -52,7 +52,11 @@
 }@else {
 <section class="w-1/2 mx-auto">
   <h3 class="text-xl font-bold text-center pt-8 pb-4">FORMULARIO REACTIVO</h3>
-  <form [formGroup]="formularioReactivo" (ngSubmit)="enviarFormularioReactivo()" class="max-w-sm mx-auto">
+  <form
+    [formGroup]="formularioReactivo"
+    (ngSubmit)="enviarFormularioReactivo()"
+    class="max-w-sm mx-auto"
+  >
     <div class="mb-5">
       <label
         for="nombre"
@@ -61,15 +65,17 @@
       >
       <input
         type="text"
-        id="nombre"
         formControlName="nombre"
         class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
       />
       @if (controlErrores('nombre', 'required')) {
-        <div  class="pl-1 mb-4 text-sm  bg-red-50  border border-red-300 rounded-lg  text-red-400 font-medium " role="alert">
-          El nombre es requerido.
-        </div>
-       }
+      <div
+        class="pl-1 mb-4 text-sm bg-red-50 border border-red-300 rounded-lg text-red-400 font-medium"
+        role="alert"
+      >
+        El nombre es requerido.
+      </div>
+      }
     </div>
     <div class="mb-5">
       <label
@@ -84,15 +90,20 @@
         class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
       />
       @if (controlErrores('email', 'required')) {
-        <div  class="pl-1 mb-4 text-sm  bg-red-50  border border-red-300 rounded-lg  text-red-400 font-medium " role="alert">
-          El email es requerido.
-        </div>
-       }
-       @if (controlErrores('email', 'email')) {
-        <div  class="pl-1 mb-4 text-sm  bg-red-50  border border-red-300 rounded-lg  text-red-400 font-medium " role="alert">
-          El email debe tener formato &#64;ejemplo.com
-        </div>
-       }
+      <div
+        class="pl-1 mb-4 text-sm bg-red-50 border border-red-300 rounded-lg text-red-400 font-medium"
+        role="alert"
+      >
+        El email es requerido.
+      </div>
+      } @if (controlErrores('email', 'email')) {
+      <div
+        class="pl-1 mb-4 text-sm bg-red-50 border border-red-300 rounded-lg text-red-400 font-medium"
+        role="alert"
+      >
+        El email debe tener formato &#64;ejemplo.com
+      </div>
+      }
     </div>
     <button
       type="submit"
