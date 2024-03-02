@@ -5,7 +5,13 @@
   "projects": {
     "02-angular-17-listar-tareas": {
       "projectType": "application",
-      "schematics": {},
+      "schematics":{
+        "@schematics/angular": {
+          "component": {
+            "changeDetection": "OnPush"
+          }
+        }
+      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -96,5 +102,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }
